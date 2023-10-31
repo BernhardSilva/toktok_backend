@@ -67,6 +67,9 @@ devDependencies:
   '@types/bcrypt':
     specifier: ^5.0.1
     version: 5.0.1
+  '@types/cookie-parser':
+    specifier: ^1.4.5
+    version: 1.4.5
   '@types/express':
     specifier: ^4.17.17
     version: 4.17.17
@@ -255,7 +258,7 @@ packages:
       '@josephg/resolvable': 1.0.1
       '@types/express': 4.17.17
       '@types/express-serve-static-core': 4.17.39
-      '@types/node-fetch': 2.6.7
+      '@types/node-fetch': 2.6.8
       async-retry: 1.3.3
       body-parser: 1.20.2
       cors: 2.8.5
@@ -1604,6 +1607,12 @@ packages:
     dependencies:
       '@types/node': 20.3.1
 
+  /@types/cookie-parser@1.4.5:
+    resolution: {integrity: sha512-cbpH1NldYslPt7WRHXZFm+G7DTfUg57dQSCf1qrHwT8wtGX41JHLYf3Cieiqg7waPWjorVgcSSllZov+A1PJbg==}
+    dependencies:
+      '@types/express': 4.17.17
+    dev: true
+
   /@types/cookiejar@2.1.3:
     resolution: {integrity: sha512-LZ8SD3LpNmLMDLkG2oCBjZg+ETnx6XdCjydUE0HwojDmnDfDUnhMKKbtth1TZh+hzcqb03azrYWoXLS8sMXdqg==}
     dev: true
@@ -1612,18 +1621,18 @@ packages:
     resolution: {integrity: sha512-zfM4ipmxVKWdxtDaJ3MP3pBurDXOCoyjvlpE3u6Qzrmw4BPbfm4/ambIeTk/r/J0iq/+2/xp0Fmt+gFvXJY2PQ==}
     dependencies:
       '@types/eslint': 8.44.6
-      '@types/estree': 1.0.3
+      '@types/estree': 1.0.4
     dev: true
 
   /@types/eslint@8.44.6:
     resolution: {integrity: sha512-P6bY56TVmX8y9J87jHNgQh43h6VVU+6H7oN7hgvivV81K2XY8qJZ5vqPy/HdUoVIelii2kChYVzQanlswPWVFw==}
     dependencies:
-      '@types/estree': 1.0.3
+      '@types/estree': 1.0.4
       '@types/json-schema': 7.0.14
     dev: true
 
-  /@types/estree@1.0.3:
-    resolution: {integrity: sha512-CS2rOaoQ/eAgAfcTfq6amKG7bsN+EMcgGY4FAFQdvSj2y1ixvOZTUA9mOtCai7E1SYu283XNw7urKK30nP3wkQ==}
+  /@types/estree@1.0.4:
+    resolution: {integrity: sha512-2JwWnHK9H+wUZNorf2Zr6ves96WHoWDJIftkcxPKsS7Djta6Zu519LarhRNljPXkpsZR2ZMwNCPeW7omW07BJw==}
     dev: true
 
   /@types/express-serve-static-core@4.17.39:
@@ -1694,8 +1703,8 @@ packages:
   /@types/mime@3.0.3:
     resolution: {integrity: sha512-i8MBln35l856k5iOhKk2XJ4SeAWg75mLIpZB4v6imOagKL6twsukBZGDMNhdOVk7yRFTMPpfILocMos59Q1otQ==}
 
-  /@types/node-fetch@2.6.7:
-    resolution: {integrity: sha512-lX17GZVpJ/fuCjguZ5b3TjEbSENxmEk1B2z02yoXSK9WMEWRivhdSY73wWMn6bpcCDAOh6qAdktpKHIlkDk2lg==}
+  /@types/node-fetch@2.6.8:
+    resolution: {integrity: sha512-nnH5lV9QCMPsbEVdTb5Y+F3GQxLSw1xQgIydrb2gSfEavRPs50FnMr+KUaa+LoPSqibm2N+ZZxH7lavZlAT4GA==}
     dependencies:
       '@types/node': 20.3.1
       form-data: 4.0.0
@@ -2020,29 +2029,29 @@ packages:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  /acorn-import-assertions@1.9.0(acorn@8.10.0):
+  /acorn-import-assertions@1.9.0(acorn@8.11.2):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
     peerDependencies:
       acorn: ^8
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
     dev: true
 
-  /acorn-jsx@5.3.2(acorn@8.10.0):
+  /acorn-jsx@5.3.2(acorn@8.11.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.2
     dev: true
 
-  /acorn-walk@8.2.0:
-    resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
+  /acorn-walk@8.3.0:
+    resolution: {integrity: sha512-FS7hV565M5l1R08MXqo8odwMTB02C2UqzB17RVgu9EyuYFBqJZ3/ZY97sQD5FewVu1UyDFc1yztUDrAwT0EypA==}
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /acorn@8.10.0:
-    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
+  /acorn@8.11.2:
+    resolution: {integrity: sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -2368,8 +2377,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001554
-      electron-to-chromium: 1.4.567
+      caniuse-lite: 1.0.30001559
+      electron-to-chromium: 1.4.571
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: true
@@ -2440,8 +2449,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite@1.0.30001554:
-    resolution: {integrity: sha512-A2E3U//MBwbJVzebddm1YfNp7Nud5Ip+IPn4BozBmn4KqVX7AvluoIDFWjsv5OkGnKUXQVmMSoMKLa3ScCblcQ==}
+  /caniuse-lite@1.0.30001559:
+    resolution: {integrity: sha512-cPiMKZgqgkg5LY3/ntGeLFUpi6tzddBNS58A4tnTgQw1zON7u2sZMU7SzOeVH4tj20++9ggL+V6FDOFMTaFFYA==}
     dev: true
 
   /chalk@2.4.2:
@@ -2509,7 +2518,7 @@ packages:
     resolution: {integrity: sha512-ct3ltplN8I9fOwUd8GrP8UQixwff129BkEtuWDKL5W45cQuLd19xqmTLu5ge78YDm/fdje6FMt0hGOhl0lii3A==}
     dependencies:
       '@types/validator': 13.11.5
-      libphonenumber-js: 1.10.48
+      libphonenumber-js: 1.10.49
       validator: 13.11.0
 
   /cli-cursor@3.1.0:
@@ -2885,8 +2894,8 @@ packages:
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  /electron-to-chromium@1.4.567:
-    resolution: {integrity: sha512-8KR114CAYQ4/r5EIEsOmOMqQ9j0MRbJZR3aXD/KFA8RuKzyoUB4XrUCg+l8RUGqTVQgKNIgTpjaG8YHRPAbX2w==}
+  /electron-to-chromium@1.4.571:
+    resolution: {integrity: sha512-Sc+VtKwKCDj3f/kLBjdyjMpNzoZsU6WuL/wFb6EH8USmHEcebxRXcRrVpOpayxd52tuey4RUDpUsw5OS5LhJqg==}
     dev: true
 
   /emittery@0.13.1:
@@ -3051,8 +3060,8 @@ packages:
     resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      acorn: 8.10.0
-      acorn-jsx: 5.3.2(acorn@8.10.0)
+      acorn: 8.11.2
+      acorn-jsx: 5.3.2(acorn@8.11.2)
       eslint-visitor-keys: 3.4.3
     dev: true
 
@@ -4423,8 +4432,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /libphonenumber-js@1.10.48:
-    resolution: {integrity: sha512-Vvcgt4+o8+puIBJZLdMshPYx9nRN3/kTT7HPtOyfYrSQuN9PGBF1KUv0g07fjNzt4E4GuA7FnsLb+WeAMzyRQg==}
+  /libphonenumber-js@1.10.49:
+    resolution: {integrity: sha512-gvLtyC3tIuqfPzjvYLH9BmVdqzGDiSi4VjtWe2fAgSdBf0yt8yPmbNnRIHNbR5IdtVkm0ayGuzwQKTWmU0hdjQ==}
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -5035,8 +5044,8 @@ packages:
       once: 1.4.0
     dev: true
 
-  /punycode@2.3.0:
-    resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
+  /punycode@2.3.1:
+    resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
     dev: true
 
@@ -5582,7 +5591,7 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
-      terser: 5.22.0
+      terser: 5.23.0
       webpack: 5.87.0
     dev: true
 
@@ -5606,17 +5615,17 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
-      terser: 5.22.0
+      terser: 5.23.0
       webpack: 5.89.0
     dev: true
 
-  /terser@5.22.0:
-    resolution: {integrity: sha512-hHZVLgRA2z4NWcN6aS5rQDc+7Dcy58HOf2zbYwmFcQ+ua3h6eEFf5lIDKTzbWwlazPyOZsFQO8V80/IjVNExEw==}
+  /terser@5.23.0:
+    resolution: {integrity: sha512-Iyy83LN0uX9ZZLCX4Qbu5JiHiWjOCTwrmM9InWOzVeM++KNWEsqV4YgN9U9E8AlohQ6Gs42ztczlWOG/lwDAMA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.5
-      acorn: 8.10.0
+      acorn: 8.11.2
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -5755,8 +5764,8 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 20.3.1
-      acorn: 8.10.0
-      acorn-walk: 8.2.0
+      acorn: 8.11.2
+      acorn-walk: 8.3.0
       arg: 4.1.3
       create-require: 1.1.1
       diff: 4.0.2
@@ -5862,7 +5871,7 @@ packages:
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
-      punycode: 2.3.0
+      punycode: 2.3.1
     dev: true
 
   /util-deprecate@1.0.2:
@@ -5952,12 +5961,12 @@ packages:
         optional: true
     dependencies:
       '@types/eslint-scope': 3.7.6
-      '@types/estree': 1.0.3
+      '@types/estree': 1.0.4
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6
-      acorn: 8.10.0
-      acorn-import-assertions: 1.9.0(acorn@8.10.0)
+      acorn: 8.11.2
+      acorn-import-assertions: 1.9.0(acorn@8.11.2)
       browserslist: 4.22.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0
@@ -5992,12 +6001,12 @@ packages:
         optional: true
     dependencies:
       '@types/eslint-scope': 3.7.6
-      '@types/estree': 1.0.3
+      '@types/estree': 1.0.4
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6
-      acorn: 8.10.0
-      acorn-import-assertions: 1.9.0(acorn@8.10.0)
+      acorn: 8.11.2
+      acorn-import-assertions: 1.9.0(acorn@8.11.2)
       browserslist: 4.22.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0

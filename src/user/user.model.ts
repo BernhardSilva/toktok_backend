@@ -1,5 +1,4 @@
-import { Field, ObjectType } from '@nestjs/graphql';
-import internal from 'stream';
+import { Field, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class User {
@@ -13,13 +12,19 @@ export class User {
   username: string;
 
   @Field()
-  email?: string;
+  email: string;
 
   @Field({ nullable: true })
   bio?: string;
 
   @Field({ nullable: true })
   image: string;
+
+  @Field(() => Int)
+  following: number[];
+
+  @Field(() => Int)
+  followers: number[];
 
   @Field()
   password: string;
@@ -29,7 +34,4 @@ export class User {
 
   @Field()
   updatedAt?: Date;
-
-  @Field()
-  following?: number[];
 }
